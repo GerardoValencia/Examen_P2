@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imagen_gato"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/cat"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imagen_perfil"
+        app:layout_constraintBottom_toTopOf="@+id/texto_gato"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/texto_gato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gatos"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/imagen_gato"
+        app:layout_constraintStart_toStartOf="@+id/imagen_gato"
+        app:layout_constraintEnd_toEndOf="@+id/imagen_gato"
+        tools:ignore="MissingConstraints"/>
+
+    <ImageView
+        android:id="@+id/imagen_perfil"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagen_gato"
+        app:layout_constraintBottom_toTopOf="@+id/texto_perfil"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/texto_perfil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Perfil"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/imagen_perfil"
+        app:layout_constraintStart_toStartOf="@+id/imagen_perfil"
+        app:layout_constraintEnd_toEndOf="@+id/imagen_perfil"
+        tools:ignore="MissingConstraints"/>
+
+    <ImageView
+        android:id="@+id/imagen_configurar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="200dp"
+        android:src="@drawable/config"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/texto_configurar"
+        app:layout_constraintEnd_toStartOf="@+id/imagen_apagar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texto_gato"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/texto_configurar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Configurar"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/imagen_configurar"
+        app:layout_constraintStart_toStartOf="@+id/imagen_configurar"
+        app:layout_constraintEnd_toEndOf="@+id/imagen_configurar"
+        android:layout_marginBottom="16dp"/>
+
+
+    <ImageView
+        android:id="@+id/imagen_apagar"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="200dp"
+        android:src="@drawable/close"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/texto_apagar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imagen_configurar"
+        app:layout_constraintTop_toBottomOf="@+id/texto_perfil"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/texto_apagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/imagen_apagar"
+        app:layout_constraintStart_toStartOf="@+id/imagen_apagar"
+        app:layout_constraintEnd_toEndOf="@+id/imagen_apagar"
+        android:layout_marginBottom="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

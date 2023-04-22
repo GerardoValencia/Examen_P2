@@ -1,18 +1,16 @@
 package edu.iest.examen_2ndo_20852
 
 import android.content.Context
+import android.content.Intent
 import android.net.ConnectivityManager
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
-import androidx.drawerlayout.widget.DrawerLayout
-import androidx.appcompat.app.ActionBarDrawerToggle
 import android.view.MenuItem
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private var Gatos: ImageView? = null
@@ -75,8 +73,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.imagen_apagar -> {
                 finish()
             }
-            R.id.imagen_perfil -> {}
+            R.id.imagen_configurar -> {
+                //val intent = Intent(this, ConfiguracionActivity::class.java)
+                //startActivity(intent)
+                }
+            }
         }
-    }
-
 }
